@@ -96,18 +96,18 @@ const deleteComparison = async (req, res) => {
 const selectCarForComparison = async (req, res) => {
   try {
     const { id } = req.params;
-    const { carId } = req.body;
+    const { carIdSelected } = req.body;
 
     const comparison = await Comparison.findById(id);
     if (!comparison) {
       return res.status(404).json({ message: "Comparación no encontrada" });
     }
 
-    if (!comparison.carIds.includes(carId)) {
+    if (!comparison.carIds.includes(carIdSelected)) {
       return res.status(400).json({ message: "El coche no pertenece a esta comparación" });
     }
 
-    comparison.selected = carId;
+    comparison.selected = carIdSelected;
     await comparison.save();
 
     res.status(200).json({ message: "Coche seleccionado con éxito", comparison });
