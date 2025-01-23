@@ -2,7 +2,7 @@ const Comparison = require("../models/comparison");
 
 const getComparisons = async (req, res) => {
   try {
-    const comparisons = await Comparison.find().populate("carIds selected");
+    const comparisons = await Comparison.find().populate("carIds");
     res.status(200).json(comparisons);
   } catch (error) {
     res
@@ -14,7 +14,7 @@ const getComparisons = async (req, res) => {
 const getComparisonById = async (req, res) => {
   try {
     const comparison = await Comparison.findById(req.params.id).populate(
-      "carIds selected"
+      "carIds"
     );
     if (!comparison) {
       return res.status(404).json({ message: "Comparación no encontrada" });

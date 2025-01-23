@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
   res.status(201).json({ message: "Bienvenido a la API de Luxury Cars" });
 });
 
-const PORT = process.env.PORT || 5050;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
