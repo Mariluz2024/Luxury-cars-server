@@ -1,0 +1,673 @@
+{
+  "collections": [
+    {
+      "info": {
+        "name": "Auth Routes",
+        "_postman_id": "12345678-abcd-1234-abcd-12345678abcd",
+        "description": "Postman collection for Auth Routes",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+      },
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/auth/register",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"testuser\",\n  \"password\": \"securepassword\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/auth/login",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"testuser\",\n  \"password\": \"securepassword\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/auth/logout",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "auth",
+                "logout"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Cars Routes",
+        "_postman_id": "12345678-abcd-1234-abcd-12345678abcd",
+        "description": "Postman collection for Cars Routes",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+      },
+      "item": [
+        {
+          "name": "Get All Cars",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/cars",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "cars"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Car by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/cars/:id",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "cars",
+                ":id"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Car",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/cars",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "cars"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"brand\": \"Toyota\",\n  \"model\": \"Corolla\",\n  \"year\": 2023,\n  \"price\": 20000\n}"
+            }
+          }
+        },
+        {
+          "name": "Update Car",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/cars/:id",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "cars",
+                ":id"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"price\": 19000\n}"
+            }
+          }
+        },
+        {
+          "name": "Delete Car",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/cars/:id",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "cars",
+                ":id"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Comparison Routes",
+        "_postman_id": "12345678-abcd-1234-abcd-12345678abcd",
+        "description": "Postman collection for Comparison Routes",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+      },
+      "item": [
+        {
+          "name": "Get All Comparisons",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/comparisons",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "comparisons"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Comparison by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/comparisons/:id",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "comparisons",
+                ":id"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Comparison",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/comparisons",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "comparisons"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"carA\": \"Toyota Corolla\",\n  \"carB\": \"Honda Civic\",\n  \"attributes\": [\n    \"price\",\n    \"performance\"\n  ]\n}"
+            }
+          }
+        },
+        {
+          "name": "Update Comparison",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/comparisons/:id",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "comparisons",
+                ":id"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"attributes\": [\n    \"price\",\n    \"reliability\"\n  ]\n}"
+            }
+          }
+        },
+        {
+          "name": "Delete Comparison",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/comparisons/:id",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "comparisons",
+                ":id"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Favorites Routes",
+        "_postman_id": "12345678-abcd-1234-abcd-12345678abcd",
+        "description": "Postman collection for Favorites Routes",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+      },
+      "item": [
+        {
+          "name": "Get All Favorites",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/favorites",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "favorites"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Favorite",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/favorites",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "favorites"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": 1,\n  \"carId\": 123\n}"
+            }
+          }
+        },
+        {
+          "name": "Remove Favorite",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/favorites",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "favorites"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": 1,\n  \"carId\": 123\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Ratings Routes",
+        "_postman_id": "12345678-abcd-1234-abcd-12345678abcd",
+        "description": "Postman collection for Ratings Routes",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+      },
+      "item": [
+        {
+          "name": "Get All Ratings",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/ratings",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "ratings"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Rating by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/ratings/:id",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "ratings",
+                ":id"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Rating",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/ratings",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "ratings"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"carId\": 123,\n  \"rating\": 4.5,\n  \"review\": \"Great car!\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Update Rating",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/ratings/:id",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "ratings",
+                ":id"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"rating\": 5,\n  \"review\": \"Changed my mind, it's perfect!\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Delete Rating",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/ratings/:id",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "ratings",
+                ":id"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Sales Routes",
+        "_postman_id": "12345678-abcd-1234-abcd-12345678abcd",
+        "description": "Postman collection for Sales Routes",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+      },
+      "item": [
+        {
+          "name": "Get All Sales",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/sales",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "sales"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Sale by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/sales/:id",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "sales",
+                ":id"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Sale",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/sales",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "sales"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": 1,\n  \"carId\": 123,\n  \"price\": 19000\n}"
+            }
+          }
+        },
+        {
+          "name": "Update Sale",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/sales/:id",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "sales",
+                ":id"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"price\": 18500\n}"
+            }
+          }
+        },
+        {
+          "name": "Delete Sale",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{host}/sales/:id",
+              "host": [
+                "{host}"
+              ],
+              "path": [
+                "sales",
+                ":id"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

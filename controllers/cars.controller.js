@@ -1,6 +1,5 @@
-const Car = require('../models/car'); // Asegúrate de que el modelo esté correctamente configurado
+const Car = require('../models/car');
 
-// Obtener todos los coches
 const getCars = async (req, res) => {
     try {
         const cars = await Car.find();

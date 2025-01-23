@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-// Definir el esquema para la colección "cars"
 const carSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -31,10 +30,9 @@ const carSchema = new mongoose.Schema({
         required: true,
     }
 }, {
-    timestamps: true, // Agrega automáticamente createdAt y updatedAt
+    timestamps: true,
 });
 
-// Crear el modelo basado en el esquema
 const Car = mongoose.model('Car', carSchema);
 
 module.exports = Car;
