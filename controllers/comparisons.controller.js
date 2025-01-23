@@ -30,11 +30,9 @@ const createComparison = async (req, res) => {
     const { carIds, selected } = req.body;
 
     if (!carIds || carIds.length < 2) {
-      return res
-        .status(400)
-        .json({
-          message: "Se requieren al menos 2 coches para una comparación",
-        });
+      return res.status(400).json({
+        message: "Se requieren al menos 2 coches para una comparación",
+      });
     }
 
     const newComparison = new Comparison({ carIds, selected });
@@ -51,11 +49,9 @@ const updateComparison = async (req, res) => {
     const { carIds, selected } = req.body;
 
     if (carIds && carIds.length < 2) {
-      return res
-        .status(400)
-        .json({
-          message: "Se requieren al menos 2 coches para una comparación",
-        });
+      return res.status(400).json({
+        message: "Se requieren al menos 2 coches para una comparación",
+      });
     }
 
     const updatedComparison = await Comparison.findByIdAndUpdate(
@@ -104,17 +100,62 @@ const selectCarForComparison = async (req, res) => {
     }
 
     if (!comparison.carIds.includes(carIdSelected)) {
-      return res.status(400).json({ message: "El coche no pertenece a esta comparación" });
+      return res
+        .status(400)
+        .json({ message: "El coche no pertenece a esta comparación" });
     }
 
     comparison.selected = carIdSelected;
     await comparison.save();
 
-    res.status(200).json({ message: "Coche seleccionado con éxito", comparison });
+    res
+      .status(200)
+      .json({ message: "Coche seleccionado con éxito", comparison });
   } catch (error) {
     res
       .status(500)
-      .json({ message: "Error al seleccionar el coche para la comparación", error });
+      .json({
+        message: "Error al seleccionar el coche para la comparación",
+        error,
+      });
+  }
+};
+
+const removeCarFromComparison = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { carIdToRemove } = req.body;
+
+    const comparison = await Comparison.findById(id);
+    if (!comparison) {
+      return res.status(404).json({ message: "Comparación no encontrada" });
+    }
+
+    if (!comparison.carIds.includes(carIdToRemove)) {
+      return res
+        .status(400)
+        .json({ message: "El coche no pertenece a esta comparación" });
+    }
+
+    comparison.carIds = comparison.carIds.filter(
+      (carId) => carId.toString() !== carIdToRemove
+    );
+
+    if (comparison.selected?.toString() === carIdToRemove) {
+      comparison.selected = null;
+    }
+
+    await comparison.save();
+
+    res.status(200).json({
+      message: "Coche eliminado con éxito de la comparación",
+      comparison,
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: "Error al eliminar el coche de la comparación",
+      error,
+    });
   }
 };
 
@@ -125,4 +166,5 @@ module.exports = {
   updateComparison,
   deleteComparison,
   selectCarForComparison,
+  removeCarFromComparison,
 };
