@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "67898ae0d4c5bde01c0dc9dd"
+  },
+  "nombre": "Adriana",
+  "correo": "a@mail.com",
+  "password": "$2b$10$PjPREEkznYLtuhDvpwTeauVYu5Yq0oWxkb68H9j5.MHwTcUpwIjWC",
+  "createdAt": {
+    "$date": "2025-01-16T22:40:32.867Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-16T22:40:32.867Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67898b76d4c5bde01c0dc9e3"
+  },
+  "nombre": "Pedro",
+  "correo": "p@mail.com",
+  "password": "$2b$10$lBELIDunK333iM2ueS1moergxUOagnQtSV4hUXHr2A3tLMHqhsRfi",
+  "createdAt": {
+    "$date": "2025-01-16T22:43:02.489Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-16T22:43:02.489Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67899137d4c5bde01c0dc9e8"
+  },
+  "nombre": "Carolina",
+  "correo": "c@mail.co",
+  "password": "$2b$10$q6ZRJejUVcqY1fBoGEqJrO8kEKXgaN6pZr8foqntCbHOryLvoohi6",
+  "createdAt": {
+    "$date": "2025-01-16T23:07:35.820Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-16T23:07:35.820Z"
+  },
+  "__v": 0
+}]

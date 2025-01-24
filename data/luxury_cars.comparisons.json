@@ -1,0 +1,108 @@
+[{
+  "_id": {
+    "$oid": "67923070e60105223572d1f5"
+  },
+  "name": "Luxury Sedans",
+  "carIds": [
+    "678efcdd72d74599ab8e85ed",
+    "678efcdd72d74599ab8e85ee",
+    "678efcdd72d74599ab8e85ec",
+    {
+      "$oid": "678efcdd72d74599ab8e85f0"
+    }
+  ],
+  "selected": {
+    "$oid": "678efcdd72d74599ab8e85ed"
+  },
+  "createdAt": "2025-01-22T12:30:00.000Z",
+  "updatedAt": {
+    "$date": "2025-01-24T00:39:27.248Z"
+  },
+  "userId": "67898ae0d4c5bde01c0dc9dd",
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "67923070e60105223572d1f6"
+  },
+  "name": "Electric Cars",
+  "carIds": [
+    "678efcdd72d74599ab8e85ee",
+    "678efcdd72d74599ab8e85ed",
+    "678efcdd72d74599ab8e85f3",
+    "678efcdd72d74599ab8e85f2"
+  ],
+  "selected": {
+    "$oid": "678efcdd72d74599ab8e85ed"
+  },
+  "createdAt": "2025-01-22T13:00:00.000Z",
+  "updatedAt": {
+    "$date": "2025-01-23T20:43:22.743Z"
+  },
+  "userId": "67898ae0d4c5bde01c0dc9dd"
+},
+{
+  "_id": {
+    "$oid": "67925362e60105223572d207"
+  },
+  "name": "SUV Comparison",
+  "carIds": [
+    {
+      "$oid": "678efcdd72d74599ab8e85ea"
+    },
+    {
+      "$oid": "678efcdd72d74599ab8e85ec"
+    }
+  ],
+  "selected": null,
+  "createdAt": "2025-01-22T12:00:00.000Z",
+  "updatedAt": {
+    "$date": "2025-01-24T00:43:55.399Z"
+  },
+  "__v": 10,
+  "userId": "67898ae0d4c5bde01c0dc9dd"
+},
+{
+  "_id": {
+    "$oid": "6792e50001c90c48ca8a0b59"
+  },
+  "name": "ABC",
+  "carIds": [
+    {
+      "$oid": "678efcdd72d74599ab8e85ea"
+    }
+  ],
+  "userId": "67898ae0d4c5bde01c0dc9dd",
+  "createdAt": {
+    "$date": "2025-01-24T00:55:28.826Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-24T00:55:58.772Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "6792e55d01c90c48ca8a0b95"
+  },
+  "name": "XYZ",
+  "carIds": [
+    {
+      "$oid": "678efcdd72d74599ab8e85ed"
+    },
+    {
+      "$oid": "678efcdd72d74599ab8e85ec"
+    },
+    {
+      "$oid": "678efcdd72d74599ab8e85ea"
+    }
+  ],
+  "userId": "67898ae0d4c5bde01c0dc9dd",
+  "createdAt": {
+    "$date": "2025-01-24T00:57:01.143Z"
+  },
+  "updatedAt": {
+    "$date": "2025-01-24T00:58:47.664Z"
+  },
+  "__v": 3
+}]

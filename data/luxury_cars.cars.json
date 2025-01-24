@@ -1,0 +1,120 @@
+[{
+  "_id": {
+    "$oid": "678efcdd72d74599ab8e85ea"
+  },
+  "name": "Tesla Model S",
+  "description": "Electric sedan with high performance and sleek design.",
+  "price": 79999,
+  "hp": 670,
+  "model": 2023,
+  "image": "https://placehold.co/300x200?text=Tesla+Model+S",
+  "stock": 5
+},
+{
+  "_id": {
+    "$oid": "678efcdd72d74599ab8e85eb"
+  },
+  "name": "Ford Mustang",
+  "description": "Iconic American muscle car with powerful engine options.",
+  "price": 55999,
+  "hp": 450,
+  "model": 2022,
+  "image": "https://placehold.co/300x200?text=Ford+Mustang",
+  "stock": 3
+},
+{
+  "_id": {
+    "$oid": "678efcdd72d74599ab8e85ec"
+  },
+  "name": "Chevrolet Camaro",
+  "description": "A stylish sports car with great performance and features.",
+  "price": 42999,
+  "hp": 335,
+  "model": 2023,
+  "image": "https://placehold.co/300x200?text=Chevrolet+Camaro",
+  "stock": 8
+},
+{
+  "_id": {
+    "$oid": "678efcdd72d74599ab8e85ed"
+  },
+  "name": "BMW M3",
+  "description": "Luxury sedan with exceptional handling and speed.",
+  "price": 69999,
+  "hp": 503,
+  "model": 2023,
+  "image": "https://placehold.co/300x200?text=BMW+M3",
+  "stock": 2
+},
+{
+  "_id": {
+    "$oid": "678efcdd72d74599ab8e85ee"
+  },
+  "name": "Audi R8",
+  "description": "A high-performance supercar with a sleek, modern design.",
+  "price": 142999,
+  "hp": 602,
+  "model": 2023,
+  "image": "https://placehold.co/300x200?text=Audi+R8",
+  "stock": 1
+},
+{
+  "_id": {
+    "$oid": "678efcdd72d74599ab8e85ef"
+  },
+  "name": "Porsche 911",
+  "description": "Timeless sports car with incredible speed and luxury.",
+  "price": 115999,
+  "hp": 473,
+  "model": 2023,
+  "image": "https://placehold.co/300x200?text=Porsche+911",
+  "stock": 4
+},
+{
+  "_id": {
+    "$oid": "678efcdd72d74599ab8e85f0"
+  },
+  "name": "Toyota Supra",
+  "description": "A modern sports car with iconic heritage.",
+  "price": 49999,
+  "hp": 382,
+  "model": 2023,
+  "image": "https://placehold.co/300x200?text=Toyota+Supra",
+  "stock": 6
+},
+{
+  "_id": {
+    "$oid": "678efcdd72d74599ab8e85f1"
+  },
+  "name": "Lamborghini Huracán",
+  "description": "A breathtaking supercar with unparalleled performance.",
+  "price": 230000,
+  "hp": 630,
+  "model": 2023,
+  "image": "https://placehold.co/300x200?text=Lamborghini+Huracan",
+  "stock": 1
+},
+{
+  "_id": {
+    "$oid": "678efcdd72d74599ab8e85f2"
+  },
+  "name": "Mercedes-Benz AMG GT",
+  "description": "A grand tourer with cutting-edge design and engineering.",
+  "price": 118999,
+  "hp": 523,
+  "model": 2023,
+  "image": "https://placehold.co/300x200?text=Mercedes+AMG+GT",
+  "stock": 3
+},
+{
+  "_id": {
+    "$oid": "678efcdd72d74599ab8e85f3"
+  },
+  "name": "Nissan GT-R",
+  "description": "A high-performance sports car with advanced technology.",
+  "price": 113540,
+  "hp": 565,
+  "model": 2023,
+  "image": "https://placehold.co/300x200?text=Nissan+GT-R",
+  "stock": 2
+}]
