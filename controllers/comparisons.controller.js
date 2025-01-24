@@ -27,15 +27,11 @@ const getComparisonById = async (req, res) => {
 
 const createComparison = async (req, res) => {
   try {
-    const { carIds, selected } = req.body;
+    const { userId, name } = req.body;
 
-    if (!carIds || carIds.length < 2) {
-      return res.status(400).json({
-        message: "Se requieren al menos 2 coches para una comparación",
-      });
-    }
+    const carIds = [];
 
-    const newComparison = new Comparison({ carIds, selected });
+    const newComparison = new Comparison({ carIds, userId, name });
     await newComparison.save();
     res.status(201).json(newComparison);
   } catch (error) {

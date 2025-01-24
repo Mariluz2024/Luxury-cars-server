@@ -10,6 +10,10 @@ const comparisonSchema = new mongoose.Schema({
     ref: 'Car',
     required: true
   }],
+  userId: {
+    type: String,
+    required: true
+  },
   selected: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Car',
