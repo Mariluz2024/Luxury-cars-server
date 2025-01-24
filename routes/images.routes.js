@@ -2,7 +2,7 @@ const express = require("express");
 const {
   addImage,
   getImageByPublicId,
-} = require("../controllers/ImageController");
+} = require("../controllers/images.controller");
 
 const router = express.Router();
 
