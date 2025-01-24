@@ -112,12 +112,10 @@ const selectCarForComparison = async (req, res) => {
       .status(200)
       .json({ message: "Coche seleccionado con éxito", comparison });
   } catch (error) {
-    res
-      .status(500)
-      .json({
-        message: "Error al seleccionar el coche para la comparación",
-        error,
-      });
+    res.status(500).json({
+      message: "Error al seleccionar el coche para la comparación",
+      error,
+    });
   }
 };
 
@@ -159,6 +157,31 @@ const removeCarFromComparison = async (req, res) => {
   }
 };
 
+const getComparisonsByUserId = async (req, res) => {
+  try {
+    const { userId } = req.params;
+
+    const comparisons = await Comparison.find({ userId }).populate("carIds");
+
+    if (!comparisons || comparisons.length === 0) {
+      return res
+        .status(404)
+        .json({
+          message: "No se encontraron comparaciones para este usuario.",
+        });
+    }
+
+    res.status(200).json(comparisons);
+  } catch (error) {
+    res
+      .status(500)
+      .json({
+        message: "Error al obtener las comparaciones del usuario",
+        error,
+      });
+  }
+};
+
 module.exports = {
   getComparisons,
   getComparisonById,
@@ -167,4 +190,5 @@ module.exports = {
   deleteComparison,
   selectCarForComparison,
   removeCarFromComparison,
+  getComparisonsByUserId,
 };
