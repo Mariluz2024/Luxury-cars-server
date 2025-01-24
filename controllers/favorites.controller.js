@@ -54,7 +54,6 @@ const deleteFavorite = async (req, res) => {
     }
 };
 
-// Eliminar un favorito por coche y usuario
 const deleteFavoriteByCarAndUser = async (req, res) => {
     try {
         const { carId, userId } = req.body;
@@ -79,7 +78,7 @@ const getFavoriteByUserId = async (req, res) => {
 
         const objectId = new mongoose.Types.ObjectId(id);
 
-        const favorites = await Favorite.find().populate('carId userId');
+        const favorites = await Favorite.find();
 
         const userFavorites = favorites.filter(favorite => favorite.userId._id.equals(objectId));
 
