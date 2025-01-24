@@ -8,8 +8,7 @@ const carRoutes = require('./routes/cars.routes');
 const authRoutes = require('./routes/auth.routes');
 const favoriteRoutes = require('./routes/favorites.routes');
 const comparisonRoutes = require('./routes/comparison.routes');
-// const ratingRoutes = require('./routes/rating.routes');
-// const salesRoutes = require('./routes/sales.routes');
+const imageRoutes = require('./routes/images.routes');
 
 const app = express();
 
@@ -22,8 +21,7 @@ app.use('/api/cars', carRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/favorites', favoriteRoutes);
 app.use('/api/comparisons', comparisonRoutes);
-// app.use('/api/ratings', ratingRoutes);
-// app.use('/api/sales', salesRoutes);
+app.use('/api/images', imageRoutes);
 
 app.get("/", (req, res) => {
   res.status(201).json({ message: "Bienvenido a la API de Luxury Cars" });
