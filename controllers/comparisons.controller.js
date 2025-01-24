@@ -164,21 +164,48 @@ const getComparisonsByUserId = async (req, res) => {
     const comparisons = await Comparison.find({ userId }).populate("carIds");
 
     if (!comparisons || comparisons.length === 0) {
-      return res
-        .status(404)
-        .json({
-          message: "No se encontraron comparaciones para este usuario.",
-        });
+      return res.status(404).json({
+        message: "No se encontraron comparaciones para este usuario.",
+      });
     }
 
     res.status(200).json(comparisons);
   } catch (error) {
+    res.status(500).json({
+      message: "Error al obtener las comparaciones del usuario",
+      error,
+    });
+  }
+};
+
+const addCarToComparison = async function (req, res) {
+  try {
+    const { id } = req.params;
+    const { carId } = req.body;
+
+    const comparison = await Comparison.findById(id);
+
+    if (!comparison) {
+      return res.status(404).json({ message: "Comparison not found." });
+    }
+
+    if (comparison.carIds.includes(carId)) {
+      return res
+        .status(400)
+        .json({ message: "Car already exists in the comparison list." });
+    }
+
+    comparison.carIds.push(carId);
+    await comparison.save();
+
+    res.status(200).json({
+      message: "Car added to the comparison list successfully.",
+      comparison,
+    });
+  } catch (error) {
     res
       .status(500)
-      .json({
-        message: "Error al obtener las comparaciones del usuario",
-        error,
-      });
+      .json({ message: "Error adding car to the comparison list.", error });
   }
 };
 
@@ -191,4 +218,5 @@ module.exports = {
   selectCarForComparison,
   removeCarFromComparison,
   getComparisonsByUserId,
+  addCarToComparison,
 };

@@ -8,7 +8,8 @@ const {
   deleteComparison,
   selectCarForComparison,
   removeCarFromComparison,
-  getComparisonsByUserId
+  getComparisonsByUserId,
+  addCarToComparison,
 } = require("../controllers/comparisons.controller");
 
 router.get("/", getComparisons);
@@ -19,5 +20,6 @@ router.delete("/:id", deleteComparison);
 router.put("/:id/select", selectCarForComparison);
 router.delete("/:id/delete-car", removeCarFromComparison);
 router.get("/user/:userId", getComparisonsByUserId);
+router.post("/:id/add-car", addCarToComparison);
 
 module.exports = router;
