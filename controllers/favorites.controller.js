@@ -78,7 +78,7 @@ const getFavoriteByUserId = async (req, res) => {
 
         const objectId = new mongoose.Types.ObjectId(id);
 
-        const favorites = await Favorite.find();
+        const favorites = await Favorite.find().populate('carId userId');
 
         const userFavorites = favorites.filter(favorite => favorite.userId._id.equals(objectId));
 
